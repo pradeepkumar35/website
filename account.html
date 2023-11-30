@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Account - Corporate Compliance Training Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Corporate Compliance Training Portal</h1>
+    <nav>
+      <a href="index.html#home">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="urcourses.html">Your Courses</a>
+        <a href="account.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="fade-in">
+    <section id="account">
+      <h2>Your Account</h2>
+      <p>Welcome, [Username]!</p>
+      <p>Here, you can manage your account settings, track your course progress, and access additional resources.</p>
+
+      <h3>Account Information</h3>
+      <ul>
+        <li><strong>Username:</strong> [Username]</li>
+        <li><strong>Email:</strong> [Email]</li>
+        <li><strong>Membership Status:</strong> Premium</li>
+        <!-- Add more account information as needed -->
+      </ul>
+
+      <h3>Course Progress</h3>
+      <p>You are currently enrolled in the following courses:</p>
+      <ul>
+        <li>
+          <strong>Module 1: Introduction to Compliance</strong>
+          <ul>
+            <li>Status: In Progress</li>
+            <li>Progress: 50%</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Module 2: Data Security</strong>
+          <ul>
+            <li>Status: Not Started</li>
+            <li>Progress: 0%</li>
+          </ul>
+        </li>
+        <!-- Add more courses and progress information as needed -->
+      </ul>
+
+      <h3>Account Settings</h3>
+      <form action="#" method="post">
+        <label for="newPassword">Change Password:</label>
+        <input type="password" id="newPassword" name="newPassword" placeholder="Enter new password">
+
+        <label for="confirmPassword">Confirm New Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm new password">
+
+        <button type="submit">Update Password</button>
+      </form>
+
+      <h3>Notification Settings</h3>
+      <p>Customize your notification preferences:</p>
+      <label>
+        <input type="checkbox" name="emailNotifications" checked> Receive email notifications
+      </label>
+      <label>
+        <input type="checkbox" name="smsNotifications"> Receive SMS notifications
+      </label>
+
+      <h3>Payment Information</h3>
+      <p>Your current payment method: [Payment Method]</p>
+      <button>Edit Payment Method</button>
+
+      <!-- Logout Button -->
+      <form id="logoutForm">
+        <button type="button" onclick="logout()">Logout</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Corporate Compliance Training Portal</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script>
+    function logout() {
+      // Perform any necessary logout actions on the server-side here
+      // For example, you may want to make an AJAX request to a server-side logout endpoint
+
+      // Redirect to index.html after logout
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

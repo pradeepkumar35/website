@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - Corporate Compliance Training Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Corporate Compliance Training Portal</h1>
+    <nav>
+        <a href="afterlogin.html">Home</a>
+        <a href="al_courses.html">Courses</a>
+        <a href="al_aboutus.html">About Us</a>
+        <a href="urcourses.html">Your Courses</a>
+        <a href="account.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="fade-in">
+    <section id="training-section">
+      <h2>Training Courses</h2>
+      <div class="module">
+        <h3>course 1: Introduction to Compliance Regulations</h3>
+        <p>Module description...</p>
+        <button type="button">Watch Video</button>
+        <button type="button" onclick="quiz1()">quiz</button>
+      </div>
+      <div class="module">
+        <h3>course 2: Data Privacy Regulations</h3>
+        <p>Module description...</p>
+        <button type="button">Watch Video</button>
+        <button type="button" onclick="quiz1()">quiz</button>
+      </div>
+      
+    </section>
+
+    <section id="progress-section">
+      <h2>Your Progress</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 50%;"></div>
+      </div>
+      <p>Module 1: 50% Complete</p>
+      <p>Module 2: Not Started</p>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Corporate Compliance Training Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script src="main.js" defer></script>
+  <script>
+    function quiz1() {
+      window.location.href = 'quiz1.html';
+    }
+  </script>
+</body>
+</html>

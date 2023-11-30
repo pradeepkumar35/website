@@ -1,0 +1,23 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .quiz-container {
+      max-width: 600px;
+      margin: auto;
+  }
+  
+  .result-container {
+      margin-top: 20px;
+  }
+  
+  /* Add the rest of your CSS styles here */
+  

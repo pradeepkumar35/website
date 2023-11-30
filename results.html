@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .result-container {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="result-container">
+    <h1>Quiz Results</h1>
+
+    <!-- Display scores from each quiz -->
+    <p>Quiz 1 Score: <span id="quiz1Score"></span></p>
+    <p>Quiz 2 Score: <span id="quiz2Score"></span></p>
+    <p>Quiz 3 Score: <span id="quiz3Score"></span></p>
+
+    <!-- Add more code to display scores for additional quizzes if needed -->
+
+    <p><a href="urcourses.html">Take another quiz</a></p>
+</div>
+
+<script>
+    // Retrieve scores from local storage
+    const quiz1Score = localStorage.getItem('quiz1Score');
+    const quiz2Score = localStorage.getItem('quiz2Score');
+    const quiz3Score = localStorage.getItem('quiz3Score');
+
+    // Display scores on the results page
+    document.getElementById('quiz1Score').textContent = quiz1Score ? quiz1Score : 'Not taken';
+    document.getElementById('quiz2Score').textContent = quiz2Score ? quiz2Score : 'Not taken';
+    document.getElementById('quiz3Score').textContent = quiz3Score ? quiz3Score : 'Not taken';
+
+    // Add more code to display scores for additional quizzes if needed
+</script>
+
+</body>
+</html>

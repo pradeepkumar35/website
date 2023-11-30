@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Compliance Training Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Corporate Compliance Training Portal</h1>
+    <nav>
+      <a href="afterlogin.html">Home</a>
+        <a href="al_courses.html">Courses</a>
+        <a href="al_aboutus.html">About Us</a>
+        <a href="urcourses.html">Your Courses</a>
+        <a href="account.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="fade-in">
+    <div class="quiz-container">
+        <h1>Course 1: Introduction to Corporate Compliance</h1><br>
+        <form id="quizForm" onsubmit="showResult(); return false;">
+            <label for="q1">Question 1: What does GDPR stand for?</label><br>
+            <select id="q1" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. General Data Protection Regulation</option>
+                <option value="b">b. Global Data Privacy Rules</option>
+                <option value="c">c. Governing Data Privacy Regulations</option>
+                <option value="d">d. General Data Privacy Rules</option>
+            </select><br><br>
+    
+            <label for="q2">Question 2: What is the purpose of a Code of Conduct in corporate compliance?</label><br>
+            <select id="q2" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. Ensuring legal compliance only</option>
+                <option value="b">b. Defining ethical standards and behavior</option>
+                <option value="c">c. Managing financial reporting</option>
+                <option value="d">d. None of the above</option>
+            </select><br><br>
+    
+            <label for="q3">Question 3: Which government agency in the United States enforces anti-corruption laws such as the FCPA?</label><br>
+            <select id="q3" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. FBI</option>
+                <option value="b">b. SEC (Securities and Exchange Commission)</option>
+                <option value="c">c. DEA (Drug Enforcement Administration)</option>
+                <option value="d">d. DOJ (Department of Justice)</option>
+            </select><br><br>
+    
+            <label for="q4">Question 4: What is the role of an Ethics Hotline in corporate compliance?</label><br>
+            <select id="q4" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. Managing employee schedules</option>
+                <option value="b">b. Reporting unethical conduct anonymously</option>
+                <option value="c">c. Providing legal advice</option>
+                <option value="d">d. Conducting training sessions</option>
+            </select><br><br>
+    
+            <label for="q5">Question 5: What is the significance of the Sarbanes-Oxley Act in corporate governance?</label><br>
+            <select id="q5" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. Regulating environmental practices</option>
+                <option value="b">b. Enhancing financial disclosure and corporate governance</option>
+                <option value="c">c. Enforcing international trade agreements</option>
+                <option value="d">d. None of the above</option>
+            </select><br><br>
+    
+            <label for="q6">Question 6: In the context of compliance, what does the term "Whistleblowing" refer to?</label><br>
+            <select id="q6" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. Reporting misconduct within the company</option>
+                <option value="b">b. Whistling during office hours</option>
+                <option value="c">c. Ignoring ethical concerns</option>
+                <option value="d">d. None of the above</option>
+            </select><br><br>
+    
+            <label for="q7">Question 7: What are the key components of a Compliance Training Program?</label><br>
+            <select id="q7" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. Only written policies</option>
+                <option value="b">b. Content, assessment, and tracking</option>
+                <option value="c">c. Employee attendance only</option>
+                <option value="d">d. None of the above</option>
+            </select><br><br>
+    
+            <label for="q8">Question 8: How does a Conflict of Interest policy contribute to corporate compliance?</label><br>
+            <select id="q8" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. By encouraging conflicts among employees</option>
+                <option value="b">b. By avoiding conflicts in business decisions</option>
+                <option value="c">c. By promoting competition</option>
+                <option value="d">d. None of the above</option>
+            </select><br><br>
+    
+            <label for="q9">Question 9: What is the role of internal audits in corporate compliance?</label><br>
+            <select id="q9" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. Evaluating compliance with policies</option>
+                <option value="b">b. Conducting external investigations</option>
+                <option value="c">c. Handling employee grievances</option>
+                <option value="d">d. None of the above</option>
+            </select><br><br>
+    
+            <label for="q10">Question 10: Why is it essential for organizations to have an Anti-Money Laundering (AML) program?</label><br>
+            <select id="q10" required><br>
+                <option value="">Select an option</option>
+                <option value="a">a. To promote money laundering</option>
+                <option value="b">b. To prevent illegal financial activities</option>
+                <option value="c">c. To encourage financial fraud</option>
+                <option value="d">d. None of the above</option>
+            </select><br><br>
+    
+            <button type="submit">Submit</button>
+        </form>
+    
+        <div class="result-container" id="resultContainer" style="display: none;">
+            <h2>Result</h2>
+            <p id="resultText"></p>
+        </div>
+    </div>
+    
+    <script>
+    function showResult() {
+        // Retrieve answers
+        const answer1 = document.getElementById('q1').value;
+        const answer2 = document.getElementById('q2').value;
+        const answer3 = document.getElementById('q3').value;
+        const answer4 = document.getElementById('q4').value;
+        const answer5 = document.getElementById('q5').value;
+        const answer6 = document.getElementById('q6').value;
+        const answer7 = document.getElementById('q7').value;
+        const answer8 = document.getElementById('q8').value;
+        const answer9 = document.getElementById('q9').value;
+        const answer10 = document.getElementById('q10').value;
+    
+        // Check answers and calculate score
+        let score = 0;
+        if (answer1 === 'a') score++;
+        if (answer2 === 'b') score++;
+        if (answer3 === 'b') score++;
+        if (answer4 === 'b') score++;
+        if (answer5 === 'b') score++;
+        if (answer6 === 'a') score++;
+        if (answer7 === 'b') score++;
+        if (answer8 === 'b') score++;
+        if (answer9 === 'a') score++;
+        if (answer10 === 'b') score++;
+    
+        // Store the score in local storage with a unique key for each quiz
+        localStorage.setItem('corporateComplianceQuizScore', score);
+    
+        // Redirect to the results page
+        window.location.href = 'results.html';
+    }
+    </script>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Corporate Compliance Training Portal</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
